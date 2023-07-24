@@ -1,0 +1,169 @@
+@use 'custom' as *;
+
+
+//import all Sections
+
+@import "sections/header";
+@import "sections/about";
+
+
+
+//import google font
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+//main styles
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --body-font: "Poppins", sans-serif;
+    --big-font-size: 3.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+    --tiny-font-size: 0.625rem;
+    --height-10: 10%;
+    --width-10: 10%;
+    --cursor-pointer: pointer;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.w-10 {
+    width: var(--width-10);
+}
+
+.h-10 {
+    height: var(--height-10);
+}
+
+body,
+button,
+input,
+textarea {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    font: "Poppins", sans-serif;
+    background-color: $white;
+    color: $black;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+.section {
+    padding: 6rem 0 2rem;
+}
+
+/* LAYOUT */
+
+.container {
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+a {
+    text-transform: capitalize;
+    text-decoration: none;
+    color: $gray-900;
+}
+
+ul {
+    list-style-type: none;
+    margin-bottom: 0;
+}
+
+
+/* responsive typograph */
+@media screen and (max-width: 992px) {
+    :root {
+        --big-font-size: 2.75rem;
+        --h1-font-size: 1.5rem;
+        --h2-font-size: 1.25rem;
+        --h3-font-size: 1rem;
+        --normal-font-size: 0.938rem;
+        --small-font-size: 0.813rem;
+        --smaller-font-size: 0.75rem;
+
+    }
+}
+
+
+/* media */
+
+@media screen and (max-width: 992px) {
+    .container {
+        margin-left: var(--mb-1-5);
+        margin-right: var(--mb-1-5);
+    }
+
+    .button {
+        padding: 1rem 1.75rem;
+    }
+
+    .button__icon {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+    body {
+        margin: 0 0 var(--header-height) 0;
+    }
+
+    .section {
+        padding: 2rem 0 4rem;
+    }
+
+    .section__subtitle {
+        margin-bottom: var(--mb-3);
+    }
+}
+
+@media screen and (max-width: 576px) {}
+
+/* For small devices */
+@media screen and (max-width: 350px) {
+    :root {
+        --big-font-size: 2.25rem;
+    }
+
+    .container {
+        margin-left: var(--mb-1);
+        margin-right: var(--mb-1);
+    }
+}

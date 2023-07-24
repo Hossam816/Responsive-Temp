@@ -1,0 +1,25 @@
+.header-container {
+    display: flex;
+    flex: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+    .header-list__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: auto;
+
+        & li {
+            margin-right: 1rem;
+            font-size: var(--h3-font-size);
+            font-family: var(--body-font);
+            transition: .3s;
+
+            &:hover {
+                font-weight: bolder;
+            }
+        }
+    }
+}
