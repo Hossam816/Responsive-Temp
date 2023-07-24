@@ -5,21 +5,80 @@
     align-items: center;
     padding: 10px;
 
-    .header-list__container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: auto;
+    .header-list {
+        .header-list__container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: auto;
 
-        & li {
-            margin-right: 1rem;
-            font-size: var(--h3-font-size);
-            font-family: var(--body-font);
-            transition: .3s;
+            & li {
+                margin-right: 1rem;
+                font-size: var(--h3-font-size);
+                font-family: var(--body-font);
+                transition: .3s;
 
-            &:hover {
-                font-weight: bolder;
+                &:hover {
+                    font-weight: bolder;
+                }
             }
         }
+
+    }
+
+    i {
+        font-size: 1.5rem;
+        cursor: pointer;
+        font-weight: normal;
+        transition: .3s;
+        display: none;
+
+        & {
+            font-weight: bolder;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .header-list {
+        .header-list_overlay {
+            i {
+                position: absolute;
+                left: 9rem;
+                top: .5rem;
+                cursor: pointer;
+            }
+
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            z-index: 99 !important;
+            background-color: rgba(0, 0, 0, 0.356);
+
+            .header-list__container {
+                // display: none !important;
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                padding: 2.5rem;
+                background-color: #666666;
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                justify-content: flex-start !important;
+                width: 20%;
+
+                li {
+                    padding: 1rem 0;
+                }
+            }
+        }
+
+    }
+
+    i {
+        display: block !important;
     }
 }

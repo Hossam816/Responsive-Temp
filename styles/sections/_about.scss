@@ -1,0 +1,113 @@
+.about {
+    min-height: 1190px;
+    width: 100%;
+    position: relative;
+
+
+    .standerd-yellow-div {
+        position: absolute;
+        background-color: #d69a3c;
+        z-index: -2;
+
+        &:first-of-type {
+            top: 20%;
+            right: -.5%;
+            width: calc(((100% - 1253px) / 2) + 606px);
+            height: 650px;
+        }
+
+        &:nth-of-type(2) {
+            right: 44%;
+            top: 18%;
+            width: 650px;
+            height: 550px;
+        }
+    }
+
+    .about-img {
+        position: absolute;
+        bottom: 8%;
+        left: 35%;
+        height: 650px;
+    }
+
+    .about-text__container {
+        position: absolute;
+        height: 600px;
+        top: 0%;
+        right: 16%;
+        display: flex;
+        flex-direction: column;
+        justify-self: start;
+        gap: 2rem;
+        padding: 4rem;
+        background: #332f29;
+        z-index: -1;
+        width: 650px;
+
+        h1 {
+            color: goldenrod;
+            font-size: 5rem;
+            font-weight: bolder;
+        }
+
+        p {
+            color: #fff;
+            font-size: 1.5rem;
+        }
+    }
+
+}
+
+//media
+
+//lg devices
+@media screen and (max-width: 992px) {
+    .about-img {
+        left: 30% !important;
+    }
+}
+
+//md devices
+
+@media screen and (max-width: 786px) {
+    .about-img {
+        left: 9% !important;
+        width: 80%;
+        height: 50%;
+    }
+
+    .standerd-yellow-div:nth-of-type(2) {
+        right: 35% !important;
+    }
+
+    .about-text__container {
+        right: 6% !important;
+        width: 500px !important;
+        gap: 1rem;
+
+        p {
+            font-size: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .about-text__container {
+        width: 300px !important;
+        padding: 1rem !important;
+
+        h1 {
+            font-size: 1.2rem !important;
+        }
+
+        p {
+            font-size: 1rem !important;
+            line-height: 2rem;
+        }
+    }
+
+    .about-img {
+        bottom: 20% !important;
+    }
+}
