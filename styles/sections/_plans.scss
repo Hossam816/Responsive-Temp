@@ -1,0 +1,96 @@
+.plans {
+    background-color: #f2f2f2;
+
+    h1 {
+        font-size: 4rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        font-weight: 300;
+        line-height: 4.8rem;
+        width: 60%;
+    }
+
+    .plan-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+
+        .plan-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+
+            .plan-box__num {
+                border-radius: 50%;
+                background-color: #d69a3c;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                color: #f2f2f2;
+                font-size: 1rem;
+                text-align: center;
+                flex: 1;
+                padding: 1rem;
+                font-family: Oswald, sans-serif;
+            }
+
+            .plan-box__text {
+                h3 {
+                    font-size: 1rem;
+                    font-weight: 500;
+                    margin-bottom: 1.7rem;
+                    letter-spacing: .1em;
+                }
+
+                p {
+                    font-size: 0.9rem;
+                    font-weight: 300;
+                }
+
+                a {
+                    border-bottom: 1px solid #d69a3c;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .plan-container {
+        flex-direction: column;
+        padding: 4rem;
+        gap: 1.5rem !important;
+
+        .plan-box {
+            margin-bottom: 4rem;
+
+            .plan-box__num {
+                font-size: 2rem !important;
+                width: 60px !important;
+                height: 60px !important;
+            }
+
+            .plan-box__text {
+                h3 {
+                    font-weight: bolder !important;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 552px) {
+    .plans {
+        h1 {
+            font-size: 3rem;
+            width: 100%;
+        }
+
+        .plan-container {
+            padding: 0;
+        }
+    }
+}
