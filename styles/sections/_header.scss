@@ -41,12 +41,19 @@
 
 @media screen and (max-width: 992px) {
     .header-list {
+        display: none;
+        transition: 0.3s;
+
         .header-list_overlay {
             i {
                 position: absolute;
-                left: 9rem;
-                top: .5rem;
+                right: 9rem;
+                top: 6.5rem;
                 cursor: pointer;
+
+                &:hover {
+                    opacity: 0.5;
+                }
             }
 
             position: fixed;
@@ -59,16 +66,16 @@
 
             .header-list__container {
                 // display: none !important;
-                position: absolute;
+                position: relative;
                 left: 0;
                 top: 0;
                 height: 100%;
                 padding: 2.5rem;
-                background-color: #666666;
+                background-color: #ffffffb2;
                 flex-direction: column !important;
-                align-items: flex-start !important;
-                justify-content: flex-start !important;
-                width: 20%;
+                align-items: center !important;
+                justify-content: center !important;
+
 
                 li {
                     padding: 1rem 0;
