@@ -1,0 +1,100 @@
+.info {
+    background-color: #f2f2f2;
+
+    .info-container {
+        position: relative;
+        min-height: 100%;
+        min-width: 100%;
+
+        .info-container__box {
+            padding: 1rem;
+            position: relative;
+            min-width: 50%;
+            min-height: 300px;
+
+            &:first-of-type {
+                position: relative;
+
+                .info-container__box-devided {
+                    background-color: #332f29;
+                    color: #ffff;
+                    padding: 3rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.2rem;
+                    justify-content: flex-start;
+                    position: absolute;
+                    min-height: 400px;
+                    max-width: 100%;
+                    margin-bottom: 0;
+                    top: -30%;
+
+
+                    h2 {
+                        color: goldenrod;
+                        font-size: 1.5rem;
+                        font-weight: 300;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                        font-weight: 300;
+                        line-height: 1.7em;
+                    }
+
+                    .info-container__btn {
+                        width: 50%;
+                        padding: 1rem 2rem;
+                        margin-bottom: 1rem;
+                        color: #ffff;
+                        border: 1px solid hsla(0, 0%, 100%, 0.8);
+                        background-color: transparent;
+                        transition: 0.3s;
+
+                        &:hover {
+                            color: #332f29;
+                            background-color: #f2f2f2;
+                        }
+                    }
+                }
+            }
+
+            &:nth-of-type(2) {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: flex-end;
+            }
+        }
+    }
+}
+
+
+//medias
+
+//lg devices
+@media screen and (max-width: 992px) {
+    .info-container {
+        flex-direction: column;
+        justify-content: center !important;
+        align-items: center !important;
+
+        .info-container__box {
+            &:first-of-type {
+                .info-container__box-devided {
+                    width: 400px;
+                    height: 400px;
+                    position: relative !important;
+                }
+            }
+
+            &:nth-of-type(2) {
+                text-align: center;
+                padding: .5rem;
+                justify-content: center !important;
+                align-items: center !important;
+            }
+        }
+
+    }
+}
