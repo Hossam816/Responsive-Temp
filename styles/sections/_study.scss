@@ -1,0 +1,115 @@
+.study_container {
+    display: flex;
+    justify-content: space-between;
+
+    .study-box {
+        padding: .7rem;
+
+
+        &:first-of-type {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+
+            .study-box__img {
+                background-image: url("../../assets/study.jpg");
+                background-repeat: no-repeat;
+                background-position: 60% 60%;
+                background-size: cover;
+                min-height: 400px;
+                width: 400px;
+            }
+
+            .study-box_text {
+                .text-container {
+                    padding: 20px 50px 0 0;
+
+                    h2 {
+                        font-weight: 700;
+                        font-size: 3rem;
+                    }
+
+                    p {
+                        font-size: .7rem;
+                    }
+                }
+            }
+        }
+
+        &:nth-of-type(2) {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-top: 3rem;
+
+            .study-box__img {
+                position: relative;
+
+                img {
+                    height: 350px;
+                    width: 350px;
+                }
+
+                div {
+                    background-color: #d69a3c;
+                    width: 350px;
+                    height: 350px;
+                    position: absolute;
+                    right: 17%;
+                    top: 10%;
+                    z-index: -1;
+                }
+            }
+
+            .study-box_text {
+                margin-top: 4rem;
+
+                h4 {
+                    font-weight: normal;
+                    font-size: 1rem;
+                }
+
+                p {
+                    font-size: 0.7rem;
+                }
+
+                button {
+                    &:hover {
+                        background: #000;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//lg devices
+
+@media screen and (max-width: 992px) {
+    .study_container {
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+
+        .study-box {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    }
+}
+
+//medium devices 
+
+@media screen and (max-width: 768px) {
+    .study-box {
+        &:nth-of-type(2) {
+            div {
+                right: 7% !important;
+                top: 6% !important;
+            }
+        }
+    }
+}
