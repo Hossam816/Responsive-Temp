@@ -1,0 +1,46 @@
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .footer__text {
+        display: flex;
+        align-items: center;
+
+        p {
+            font-weight: 400;
+            font-size: 1rem;
+            font-family: "poppins", sans-serif;
+        }
+    }
+
+    .footer__social {
+        display: flex;
+        gap: 1rem;
+
+        i {
+            font-size: 1.7rem;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:first-of-type {
+                &:hover {
+                    color: blue;
+                }
+            }
+
+            &:nth-of-type(2) {
+                &:hover {
+                    color: rgb(54, 54, 255);
+                }
+            }
+
+            &:nth-of-type(3) {
+                &:hover {
+                    color: pink;
+                }
+            }
+        }
+    }
+}
