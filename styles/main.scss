@@ -8,6 +8,8 @@
 @import "sections/info";
 @import "sections/study";
 @import "sections/plans";
+@import "sections/stuff";
+@import "sections/courses";
 
 
 
@@ -66,7 +68,6 @@ textarea {
 
 .random__btn {
     padding: 1rem 2rem;
-    margin-bottom: 1rem;
     background-color: transparent;
     transition: 0.3s;
 }
